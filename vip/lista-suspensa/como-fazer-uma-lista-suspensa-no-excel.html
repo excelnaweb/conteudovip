@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang=pt-br>
+ 
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+   
+   <head>
+      <meta charset=utf-8>
+      <meta http-equiv=X-UA-Compatible content="IE=edge">
+      <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <title>Como fazer uma lista suspensa no Excel</title>
+      
+      <meta name=description content="A lista suspensa permite visualizar mais rapidamente as informações colocadas na sua planilha. Quer aprender a como fazer? Confira o nosso tutorial!" runat=server>
+
+      <meta name=mobile-web-app-capable content=yes>
+      <link type=image/x-icon rel="shortcut icon" href=../../favicon.ico>
+      <link type=image/x-icon rel=icon href=../../favicon.ico>
+      
+	  <style>.txtHover:hover,.txtHover:active,.txtHover:focus{color:#FF9900 !important}.bgColor,.bgHover:hover,.bgHover.active a,.bgHover.active{background-color:#FF9900 !important}.txtBannerTwo{background-color:#339966 !important}</style>
+      
+      <link rel=stylesheet href=/galeria/repositorio/styles/style.min.css async defer>
+      <link rel=stylesheet href=/galeria/repositorio/styles/styleIE.css async defer>
+      <link rel=stylesheet href="http://fonts.googleapis.com/css?family=Montserrat:400,700" async defer>
+     
+   
+   <body>
+      <link rel=stylesheet href=../../galeria/repositorio/styles/style.min.css async defer>
+      <link rel=stylesheet href="http://fonts.googleapis.com/css?family=Montserrat:400,700" async defer>
+  
+      <nav class="navbar navbar-default visible-xs inside" role=navigation>
+         <div class=container>
+            <div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#navbarPrincipal-collapse-1> <span class=sr-only>Abrir Menu</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span> </button> <a class="navbar-brand hidden-xs" href="http://www.excelnaweb.com.br" target="_blank"> <img src=../../galeria/repositorio/images/defaults/logo.jpg class=noDisplay alt="" title="" class=logo> </a> <a class="navbar-brand visible-xs pull-right" href="http://www.excelnaweb.com.br" target="_blank"> <img src=../../galeria/repositorio/images/defaults/logoXS.png alt="""" title="""" class=logo> </a></div>
+            <div class="collapse navbar-collapse" id=navbarPrincipal-collapse-1>
+               <ul class="nav navbar-nav navbar-right visible-xs">
+                  <li class=bgHover><a href=../../a-empresa.html>O EXCEL NA WEB</a>
+                  <li class=bgHover><a href=../../seja-um-franqueado.html>ARTIGOS PUBLICADOS</a>
+                  <li class=bgHover><a href=../../contato.html>CURSO DE EXCEL</a>
+               </ul>
+            </div>
+         </div>
+      </nav>
+	  <!--
+      <div class="navbar-menu-principal visible-xs">
+         <a href=../../cursos.html class=outer>
+            <div class=cursos>
+               <div class=ico>
+                  <div class="img img-cursos"></div>
+               </div>
+               <div class=texto>CURSOS</div>
+            </div>
+         </a>
+         <div class=clearfix></div>
+         <a href=../../escolas.html class=outer>
+            <div class=unidades>
+               <div class=ico>
+                  <div class="img img-unidades"></div>
+               </div>
+               <div class=texto>ESCOLAS</div>
+            </div>
+         </a>
+         <div class=clearfix></div>
+         <a href=../../quero-desconto.html class=outer>
+            <div class=quero-desconto>
+               <div class=ico>
+                  <div class="img img-quero-desconto"></div>
+               </div>
+               <div class=texto>QUERO DESCONTO</div>
+            </div>
+         </a>
+         <div class=clearfix></div>
+      </div>
+	  -->
+      <div class="menu-affix affix hidden-xs showOverflow" style=background-color:#1E7145;height:90px>
+         <div class=container>
+            <div class="logo pull-left"><a href="http://www.excelnaweb.com.br" target="_blank"><img src=../../galeria/repositorio/images/defaults/logoBranco.png alt="""" title=""""></a></div>
+            <ul class="list-inline pull-right">
+               <li class="dropdown sos">
+                  <a href=javascript: class=dropdown-toggle id=ddMenuHeader data-toggle=dropdown>
+                     <div class=helper></div>
+                     <div class="img img-sos"></div>
+                     <div class=texto>O BLOG</div>
+                     <span class=caret></span> 
+                  </a>
+                  <ul class="dropdown-menu dropdown-sos-light" role=menu aria-labelledby=ddMenuHeader>
+                     <li class=bgHover><a href="http://www.excelnaweb.com.br/2012/01/aprender-excel-tutorial-de-excel.html" target="_blank" class=bgHover>O EXCEL NA WEB</a>
+                     <li class=bgHover><a href="http://www.excelnaweb.com.br/p/indice.html" target="_blank" class=bgHover>ARTIGOS PUBLICADOS</a>
+                     <!--<li class=bgHover><a href="" class=bgHover>""</a>-->
+                     <!--<li class="bgHover active"><a href="" class="bgHover active">""</a>-->
+                     <!--<li class=bgHover><a href="" class=bgHover>""</a>-->
+                     <!--<li class=bgHover><a href="" class=bgHover>""</a>-->
+                     <!--<li class=bgHover><a href="" class="last bgHover hidden-lg">""</a>-->
+                  </ul>
+               <li class=cursos>
+                  <a href="http://hotmart.net.br/show.html?a=L5206730Q&src=convitevip" target="_blank">
+                     <div class=helper></div>
+                     <div class="img img-cursos-xs"></div>
+                     <div class=texto>CURSO DE EXCEL </div>
+                  </a>
+			   <!--  
+               <li class=unidades>
+                  <a href=../../escolas.html>
+                     <div class=helper></div>
+                     <div class="img img-unidades-xs"></div>
+                     <div class=texto>ESCOLAS</div>
+                  </a>
+               <li class="quero-desconto last-not-lg">
+                  <a href=../../quero-desconto.html>
+                     <div class=helper></div>
+                     <div class="img img-quero-desconto-xs"></div>
+                     <div class=texto>QUERO DESCONTO</div>
+                  </a>
+               <li class="dropdown certificacoes">
+                  <a href=javascript: class="dropdown-toggle visible-lg" id=ddMenuHeader data-toggle=dropdown>
+                     <div class=helper></div>
+                     <div class="img img-certificacoes"></div>
+                     <div class=texto>CERTIFICAÇÕES</div>
+                     <span class=caret></span> 
+                  </a>
+                  <ul class="dropdown-menu dropdown-certificacoes-light" role=menu aria-labelledby=ddMenuHeader>
+                     <li class=bgHover><a href=../../mos.html class=bgHover>MICROSOFT OFFICE SPECIALIST</a>
+                  </ul>
+				-->  
+            </ul>
+         </div>
+      </div>
+      <div class="container container-first hidden-xs">
+         <ol class=breadcrumb>
+            <li><a href="">Home</a>
+            <li><a href="">Conteudo VIP</a>
+            <li><a href="">Excel</a>
+            <li class=active>Como fazer uma lista suspensa no Excel
+         </ol>
+      </div>
+      <div class="container container-second">
+         <div class="ico-pagina noticias" style=background-color:#339966>
+            <div class="img img-noticias img-titulo-pagina"></div>
+         </div>
+         <div class="clearfix hidden-xs"></div>
+         <h3 class=titulo-pagina style=color:#339966>
+            CONTEÚDO VIP<br>
+            <div class=detalhe style=background-color:#339966></div>
+         </h3>
+         <div class=clearfix></div>
+         <div class=box-noticia>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+               <div class=row>
+                  <h1 class=titulo>Como fazer uma lista suspensa no Excel</h1>
+                  <img src="capa-lista-suspensa.jpg" width="768" height="600" alt="""" title="""">
+                  <div class=divider>
+                     <div class="data pull-left"></div>
+                   
+                     <div class=clearfix></div>
+                  </div>
+				  
+                  <p>Um dos softwares mais importantes de todos os tempos no mundo corporativo, o Excel ainda mant&eacute;m a sua supremacia. Locais de trabalho de todo o mundo usam este programa desde o seu lan&ccedil;amento, em 1985, para organizar dados complexos e controlar informa&ccedil;&otilde;es.
+                  <p>
+                  <p>O Excel possui in&uacute;meras fun&ccedil;&otilde;es populares e importantes para o seu dia a dia, mas h&aacute; tamb&eacute;m um recurso igualmente &uacute;til: se voc&ecirc; n&atilde;o sabe o que &eacute; lista suspensa, trata-se de informa&ccedil;&otilde;es que ficam armazenadas na mem&oacute;ria do Excel e o software exibe os dados relacionados &agrave; uma informa&ccedil;&atilde;o pr&eacute;-carregada no documento.
+                  <p>
+                  <p>Suponhamos que voc&ecirc; trabalhe na log&iacute;stica de uma f&aacute;brica de caixas. Em fun&ccedil;&atilde;o da entrada e sa&iacute;da de produtos, voc&ecirc; precisa organizar as informa&ccedil;&otilde;es sobre os tipos de caixas. Sendo assim, consideremos tr&ecirc;s tipos: pequena, m&eacute;dia e grande.&nbsp; E tr&ecirc;s cores: marrom, branca e preta.
+                  <p>
+                  <p>Em algum momento voc&ecirc; precisa acessar somente as informa&ccedil;&otilde;es relacionadas a um tipo de caixa. Uma lista suspensa permite mostrar as informa&ccedil;&otilde;es por categoria, ao identificar cada tipo de caixa como um produto &agrave; parte.
+                  <p>
+                  <h2>A melhor solu&ccedil;&atilde;o</h2>
+                  <p>A lista suspensa permite visualizar mais rapidamente as informa&ccedil;&otilde;es colocadas na sua planilha. O que ela faz &eacute; padronizar todas as refer&ecirc;ncias existentes, o que costuma ser conveniente, j&aacute; que, &agrave;s vezes, &eacute; preciso completar cada campo v&aacute;rias vezes.
+                  <p>Como usar uma lista suspensa no Excel? Com este procedimento, quando voc&ecirc; criar um relat&oacute;rio, por exemplo, d&aacute; para ter dados precisos e organizados.
+                  <p>Com a cria&ccedil;&atilde;o da lista, os usu&aacute;rios v&atilde;o poder selecionar as op&ccedil;&otilde;es que desejem, mas previamente definidas pelo propriet&aacute;rio do documento. &Eacute; a melhor forma de manter a integridade dos dados para padronizar a introdu&ccedil;&atilde;o de informa&ccedil;&otilde;es no seu documento.
+                  <h2>Construindo uma lista suspensa no Excel</h2>
+                  <p>Siga estes passos para saber "" sem complica&ccedil;&otilde;es:
+                  <h3>Passo 1</h3>
+                  <p>Em primeiro lugar, &eacute; necess&aacute;rio completar todas as informa&ccedil;&otilde;es que ser&atilde;o inclu&iacute;das na lista. Escolha uma linha ou mesmo uma coluna e coloque os dados sem deixar nenhuma c&eacute;dula vazia dentro do intervalo a trabalhar. Voc&ecirc; pode organizar as informa&ccedil;&otilde;es que aparecem no intervalo por ordem alfab&eacute;tica. Assim, os dados v&atilde;o aparecer ordenados quando cada lista for selecionada. Esse procedimento &eacute; simples, voc&ecirc; pode tanto selecionar as c&eacute;lulas e clicar com o bot&atilde;o direito do mouse e no sub-menu &ldquo;classificar&rdquo; ou buscar a op&ccedil;&atilde;o na barra de ferramentas, acima, &agrave; direita.
+                  <p><img alt="Passo 1 - """ class=img-responsive src=passo-1-completar-informacoes-da-lista.png style=width:578px;height:475px>
+                  <h3>Passo 2</h3>
+                  <p>Em segundo lugar, voc&ecirc; precisa cadastrar os dados no Excel. Para isso, v&aacute; na aba &ldquo;f&oacute;rmulas&rdquo; e em &ldquo;Gerenciador de Nomes&rdquo; escolha a op&ccedil;&atilde;o &ldquo;novo&rdquo;. Escolha um nome para essa lista e na op&ccedil;&atilde;o &ldquo;refere-se a&rdquo; selecione as c&eacute;lulas onde as informa&ccedil;&otilde;es aparecem:
+                  <p><img alt="Passo 2 - """ class=img-responsive src=passo-2-cadastrar-dados-do-excel.png style=width:539px;height:426px>Para fazer a lista suspensa referente ao tamanho da caixa, basta seguir o mesmo procedimento.
+                  <p><img alt="Passo 3 - """ class=img-responsive src=passo-3-lista-suspensa-tamanho-da-caixa.png style=width:196px;height:126px>
+                  <h3>Passo 3</h3>
+                  <p>O pr&oacute;ximo procedimento tem como finalidade colocar essa lista dentro da planilha onde ela ser&aacute; usada. Selecione o intervalo que ir&aacute; conter a lista suspensa e aperte na aba &ldquo;Dados&rdquo;, na parte de cima do Excel; logo, selecione &ldquo;Valida&ccedil;&atilde;o de Dados&rdquo;.&nbsp; Ao clicar nessa op&ccedil;&atilde;o aparecer&aacute; a caixa abaixo para que voc&ecirc; selecione a lista desejada. Na op&ccedil;&atilde;o &ldquo;permitir&rdquo; selecione o modo &ldquo;lista&rdquo; e na op&ccedil;&atilde;o &ldquo;fonte&rdquo; digite o sinal de igual (=) e em seguida digite o nome da lista que voc&ecirc; criou no passo anterior:
+                  <p><img alt="Passo 4 - """ class=img-responsive src=passo-4-colocando-lista-dentro-da-planilha-excel.png style=width:634px;height:362px>
+                  <p>Para fazer a lista suspensa referente ao tamanho das caixas, basta seguir o mesmo procedimento e na op&ccedil;&atilde;o &ldquo;fonte&rdquo; digitar o nome da lista referente ao tamanho das caixas. Ao clicar em OK a lista ser&aacute; criada nas c&eacute;lulas que foram selecionadas no come&ccedil;o do processo:
+                  <p><img alt="Passo 5 - """ src=passo-5-lista-suspensa-no-tamanho-da-caixa.png style=width:199px;height:107px>
+                  <p><img alt="Passo 6 - Construindo lista suspensa Excel" class=img-responsive src=passo-6-lista-suspensa-no-tamanho-da-caixa.png style=width:220px;height:129px>
+                  <h3>Passo 4</h3>
+                  <p>Voc&ecirc; pode escrever um aviso na coluna que dever&aacute; ser preenchida com a lista suspensa quando a c&eacute;lula for selecionada. Para isso, entre na aba &ldquo;Mensagem de Entrada&rdquo;. Defina um t&iacute;tulo e a mensagem correspondente.&nbsp;
+                  <p><img alt="Passo 7 - Construir lista suspensa no Excel" class=img-responsive src=passo-7-escrevendo-aviso-na-coluna.png style=width:417px;height:316px>
+                  <p><img alt="Passo 9 - Fazendo uma lista suspensa no Excel" class=img-responsive src=passo-8-escolhendo-cor.png style=width:212px;height:123px>Passamos para a seguinte aba, de &ldquo;Alerta de Erros&rdquo; para que o Excel nos avise quando um campo est&aacute; mal preenchido. Clique em ok. Pronto, a sua lista suspensa est&aacute; criada.&nbsp;
+                  <p><img alt="Lista suspensa no Excel - Aprenda como fazer uma" class=img-responsive src=passo-9-alerta-de-erro.png style=width:407px;height:309px>
+                  <p>Ao preencher a c&eacute;lula com uma informa&ccedil;&atilde;o errada, uma mensagem ser&aacute; exibida:
+                  <p><img alt="Pronto - Lista suspensa no Excel concluida" class=img-responsive src=passo-10-alerta-de-erro.png style=width:440px;height:206px>
+
+               </div>
+            </div>
+			
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+               <h3 style=color:#339966>
+                  Dica Bônus
+                  <div class=destaque style=background-color:#339966></div>
+               </h3>
+               <dl>
+                  <a href="http://www.excelnaweb.com.br/2014/01/como-criar-listas-dependentes-no-excel.html" target="_blank" class=txtHover>
+                     <dt>Como fazer listas dependentes no Excel
+                     <dd><b>Leia mais [+]</b></dd>
+                     <span class=clearfix></span> 
+                  </a>
+				  <!--
+                  <a href=../tecnologia/como-calcular-porcentagem-excel.html class=txtHover>
+                     <dt>Como calcular porcentagem no Excel
+                     <dd><b>leia mais [+]</b></dd>
+                     <span class=clearfix></span> 
+                  </a>
+				  -->
+               </dl>
+            </div>
+            <div class=clearfix></div>
+            <div class="visible-xs visible-sm">
+               <h3 style=color:#339966>
+                  Mais Vistas
+                  <div class=destaque style=background-color:#339966></div>
+               </h3>
+               <div class=owlMaisVistas>
+                  <div class=item>
+                     <dl>
+                        <a href=formulas-do-excel-que-vao-aparecer-no-seu-teste-de-entrevista-de-emprego.html class=txtHover>
+                           <dt>F&#243;rmulas do Excel que v&#227;o aparecer no seu teste de entrevista de emprego
+                           <dd><b>leia mais [+]</b></dd>
+                           <span class=clearfix></span> 
+                        </a>
+                     </dl>
+                  </div>
+                  <div class=item>
+                     <dl>
+                        <a href=../tecnologia/como-calcular-porcentagem-excel.html class=txtHover>
+                           <dt>Como calcular porcentagem no Excel
+                           <dd><b>leia mais [+]</b></dd>
+                           <span class=clearfix></span> 
+                        </a>
+                     </dl>
+                  </div>
+                  <div class=item>
+                     <dl>
+                        <a href=../mercado-de-trabalho/como-vender-um-produto-em-uma-dinamica-de-emprego.html class=txtHover>
+                           <dt>Como vender um produto em uma din&#226;mica de emprego
+                           <dd><b>leia mais [+]</b></dd>
+                           <span class=clearfix></span> 
+                        </a>
+                     </dl>
+                  </div>
+                  <div class=item>
+                     <dl>
+                        <a href=../tecnologia/conheca-alguns-mitos-sobre-o-4g.html class=txtHover>
+                           <dt>Conhe&#231;a alguns mitos sobre o 4G
+                           <dd><b>leia mais [+]</b></dd>
+                           <span class=clearfix></span> 
+                        </a>
+                     </dl>
+                  </div>
+                  <div class=item>
+                     <dl>
+                        <a href=../administracao/quais-sao-as-rotinas-de-um-departamento-pessoal.html class=txtHover>
+                           <dt>Quais s&#227;o as rotinas de um departamento pessoal?
+                           <dd><b>leia mais [+]</b></dd>
+                           <span class=clearfix></span> 
+                        </a>
+                     </dl>
+                  </div>
+                  <div class=item>
+                     <dl>
+                        <a href=../tecnologia/7-filmes-sobre-tecnologia-que-voce-deve-assistir.html class=txtHover>
+                           <dt>7 filmes sobre tecnologia que voc&#234; deve assistir
+                           <dd><b>leia mais [+]</b></dd>
+                           <span class=clearfix></span> 
+                        </a>
+                     </dl>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+	
+      <div class=nav-top><span class="glyphicon glyphicon-chevron-up"></span></div>
+	  
+      <div class=box-rodape style=background-color:#339966>
+         <div class=container>
+            <div class=floater-outer><img src=../../galeria/repositorio/images/defaults/logoBranco.png alt="""" class="logo-rodape floater" title=""""></div>
+            <div class=clearfix></div>
+            <div class=row>
+                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-top">
+                  <dl>
+                     <dt>SOBRE O AUTOR
+                     <dd>Ricardo Fialkoski é o fundador do blog Excel na Web. Trabalha com Excel há mais de dez anos desenvolvendo Soluções Avançadas em Excel e VBA.
+                  </dl>
+               </div>
+               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-top">
+                  <dl>
+                     <dt>INSTITUCIONAL
+                     <dd>O blog Excel na Web tem 5 anos de existência e é considerado referência nacional quando o assunto é Ensino de Excel com excelência.
+                     <!--<dd><a href=../../contato.html class=txtHover>Contato</a>-->
+                  </dl>
+               </div>
+             
+               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-top">
+                  <dl>
+                     <dt>VISÃO
+                     <dd>Em 5 anos de história, o Excel na Web sempre prezou pela melhor experiência para seus leitores, seguidores e alunos.</dd>
+				
+                  </dl>
+               </div>
+			   
+			   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-top">
+                  <dl>
+                     <dt>CURSOS E MATERIAIS
+                     <dd><a href=http://hotmart.net.br/show.html?a=L5206730Q&src=convitevip class=txtHover target="_blank">Curso Dominando o Excel</a>
+                     <dd><a href=http://hotmart.net.br/show.html?a=I4501236K&src=convitevip class=txtHover target="_blank">Guia Secreto do PROCV</a>
+                     <dd><a href=http://hotmart.net.br/show.html?a=E4522424Q&src=convitevip class=txtHover target="_blank">7 Planilhas Salvadoras</a>
+					 <dd><a href=http://hotmart.net.br/show.html?a=L5206730Q&src=convitevip class=txtHover target="_blank">Curso Excel PRO</a>
+                  </dl>
+               </div>
+            </div>
+         </div>
+         <div class=destaque style=background-color:#339966>
+         
+         </div>
+		 
+         <div class=box-developer>
+            <div class=container>
+               <div class=row>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                     <div class="texto first"></div>
+                  </div>
+                  <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12">
+                     <div class=texto>©EXCEL NA WEB. Todos os direitos reservados.</div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+      <!--[if lt IE 9]><script src=/galeria/repositorio/scripts/plugins/html5shiv.min.js></script><script src=/galeria/repositorio/scripts/plugins/respond.min.js></script><![endif]-->
+	  <script src=../../galeria/repositorio/scripts/jquery.custom.min.js></script>
